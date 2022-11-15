@@ -30,5 +30,27 @@ FEATURES = [
     # "nr_employed",  # number of employees - quarterly indicator (numeric)
 ]
 
+LOG_FEATS = [
+    # "duration",
+    "campaign",
+    "pdays",
+    "previous",
+]
+
+ONEHOT_FEATS = {
+    "job": ['blue-collar', 'admin.', 'retired', 'housemaid', 'management', 'technician',
+            'entrepreneur', 'services', 'student', 'unemployed', 'self-employed', 'unknown'],
+    "contact": ['telephone', 'cellular'],
+    "poutcome": ['nonexistent', 'failure', 'success'],
+}
+
+ORDINAL_FEATS = {
+    "marital": ["single", "married", "divorced", "unknown"],
+    "education": ['illiterate', 'basic.4y', 'basic.6y', 'basic.9y', 'high.school', 'professional.course', 'university.degree', 'unknown'],
+    "default": ['unknown', 'no', 'yes'],
+    "housing": ['unknown', 'no', 'yes'],
+    "loan": ['unknown', 'no', 'yes'],
+}
+
 TARGET = ["y"]
 

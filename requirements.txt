@@ -3,3 +3,5 @@ pandas
 fastparquet
 scikit-learn
 matplotlib
+plotly
+streamlit

@@ -61,7 +61,7 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
 def main():
     df = get_train(path="../input")
     df = preprocess(df)
-    df.to_parquet("../data/train.parquet")
+    df.to_parquet("../data/train.parquet", engine="fastparquet")
 
     print("\ndata types")
     print(df.dtypes)
@@ -79,8 +79,7 @@ def main():
 
     df = get_test(path="../input")
     df = preprocess(df)
-    df.to_parquet("../data/test.parquet")
-
+    df.to_parquet("../data/test.parquet", engine="fastparquet")
 
 
 if __name__ == "__main__":
